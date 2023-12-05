@@ -33,9 +33,15 @@
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 
-  color: #be1717;
+  color: #1f1c1c;
   font-size: 20px;
   font-weight: 300;
+  }
+
+  .search-box:hover{
+    box-shadow: 10px 5px 15px rgb(15, 15, 15);
+    color: bisque;
+    transform: translateY(-10px);
   }
   
   
@@ -81,9 +87,24 @@
     text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
   }
   
-  .current .hi-low {
+  .current .h-b {
     color: #fff;
     font-size: 24px;
     font-weight: 500;
-    text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .current {
+    position: relative; /* Ajout d'une position relative pour positionner l'image du thermomètre */
+  }
+  
+  .thermometer {
+    position: absolute;
+    top: 40%;
+    left: -400px; /* Ajustez la valeur selon vos besoins */
+    transform: translateY(-50%);
+    width: 250px; /* Ajustez la taille selon vos besoins */
+    height: 250px;
+    backdrop-filter: blur(100px); /* Ajustez le flou selon vos préférences */
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
   }

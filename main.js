@@ -1,5 +1,5 @@
 const api = {
-    key: "fcc8de7015bbb202209bbf0261babf4c",
+    key: "56db583eb2bfdaedaa0b4effc9985438",
     base: "https://api.openweathermap.org/data/2.5/"
   }
   
@@ -33,9 +33,26 @@ const api = {
     let weather_el = document.querySelector('.current .weather');
     weather_el.innerText = weather.weather[0].main;
   
-    let hilow = document.querySelector('.hi-low');
+    let hilow = document.querySelector('.h-b');
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+
+    let thermometerImage = document.querySelector('.current .thermometer');
+    thermometerImage.src = determineThermometerImage(weather.main.temp);
   }
+
+  function determineThermometerImage(temperature) {
+    if (temperature <= 10) {
+       console.log("Cold Image");
+       return "image\clipart-thermometer-.png";
+    } else if (temperature <= 20) {
+       console.log("Moderate Image");
+       return "image\clipart-thermometer-.png";
+    } else {
+       console.log("Hot Image");
+       return "image\clipart-thermometer-.png";
+    }
+ }
+ 
   
   function dateBuilder (d) {
     let months = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"];
