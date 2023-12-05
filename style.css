@@ -94,17 +94,17 @@
   }
 
   .current {
-    position: relative; /* Ajout d'une position relative pour positionner l'image du thermomètre */
+    position: relative; 
   }
   
   .thermometer {
     position: absolute;
     top: 40%;
-    left: -400px; /* Ajustez la valeur selon vos besoins */
+    left: -400px; 
     transform: translateY(-50%);
-    width: 250px; /* Ajustez la taille selon vos besoins */
+    width: 250px;
     height: 250px;
-    backdrop-filter: blur(100px); /* Ajustez le flou selon vos préférences */
+    backdrop-filter: blur(100px); 
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 15px;
   }
